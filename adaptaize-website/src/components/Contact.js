@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Contact.css';
+import './PageLayout.css';
 
-const Contact = () => {
+function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,31 +39,39 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
-      <div className="contact-container">
+    <div className="page-container">
+      <div className="page-content">
         <h1>Contact Us</h1>
-        <p className="contact-intro">Have questions about our AI-powered automation services? We're here to help!</p>
-        
-        <div className="contact-content">
+        <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+        <div className="contact-grid">
           <div className="contact-info">
-            <div className="info-item">
-              <h3>Email</h3>
-              <p>info@adaptaize.com</p>
-            </div>
-            <div className="info-item">
-              <h3>Phone</h3>
-              <p>+1 (555) 123-4567</p>
-            </div>
-            <div className="info-item">
-              <h3>Address</h3>
-              <p>123 Automation Street<br />San Francisco, CA 94105<br />United States</p>
-            </div>
-            <div className="info-item">
-              <h3>Business Hours</h3>
-              <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-            </div>
+            <h2>Get in Touch</h2>
+            <p>You can reach us through any of the following methods:</p>
+            <ul>
+              <li>Email: contact@adaptaize.com</li>
+              <li>Phone: (555) 123-4567</li>
+              <li>Hours: Monday - Friday, 9am - 5pm EST</li>
+            </ul>
+
+            <h2>Office Location</h2>
+            <p>123 Business Street<br />
+            Suite 100<br />
+            New York, NY 10001</p>
+
+            <h2>Social Media</h2>
+            <p>Follow us on social media for updates and news:</p>
+            <ul>
+              <li>LinkedIn: /company/adaptaize</li>
+              <li>Twitter: @adaptaize</li>
+              <li>Facebook: /adaptaize</li>
+            </ul>
+
+            <h2>Support</h2>
+            <p>For technical support or service-related questions:</p>
+            <p>Email: support@adaptaize.com</p>
           </div>
-          
+
           <div className="contact-form-container">
             <h2>Send Us a Message</h2>
             {isSubmitted ? (
@@ -129,6 +137,6 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Contact; 
