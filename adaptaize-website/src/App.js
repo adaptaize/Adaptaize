@@ -6,6 +6,8 @@ import './components/SchedulePage.css';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import Contact from './components/Contact';
+import logo from './assets/logo.svg';
+import heroGraph from './assets/hero-graph.svg';
 
 function ScrollToSection() {
   const location = useLocation();
@@ -25,29 +27,26 @@ function ScrollToSection() {
 }
 
 function Navigation() {
-  const navigate = useNavigate();
   const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleSectionClick = (sectionId) => {
+  const handleNavigation = (section) => {
     if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: sectionId } });
+      navigate('/', { state: { scrollTo: section } });
     } else {
-      const element = document.querySelector(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      document.querySelector(`#${section}`).scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <nav className="nav">
-      <div className="logo">
-        <Link to="/">AdaptAIze</Link>
-      </div>
+      <Link to="/" className="logo">
+        <img src={logo} alt="AdaptAIze" height="40" />
+      </Link>
       <div className="nav-links">
-        <button onClick={() => handleSectionClick('#how-it-works')} className="nav-button">How It Works</button>
-        <button onClick={() => handleSectionClick('#testimonials')} className="nav-button">Testimonials</button>
-        <Link to="/schedule">Schedule Audit</Link>
+        <button className="nav-button" onClick={() => handleNavigation('how-it-works')}>How It Works</button>
+        <button className="nav-button" onClick={() => handleNavigation('testimonials')}>Testimonials</button>
+        <Link to="/schedule" className="cta-button primary">Schedule Audit</Link>
       </div>
     </nav>
   );
@@ -163,7 +162,7 @@ function App() {
                     </div>
                   </div>
                   <div className="hero-image">
-                    <img src="/graph-automation-illustration.png" alt="Business Growth" />
+                    <img src={heroGraph} alt="Business Growth with AdaptAIze" />
                   </div>
                 </div>
               </section>
