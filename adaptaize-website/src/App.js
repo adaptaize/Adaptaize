@@ -193,6 +193,21 @@ function App() {
                 </div>
               </section>
 
+              {/* Busy Business Section */}
+              <section className="busy-business">
+                <div className="busy-business-content">
+                  <div className="busy-business-text">
+                    <h2>You're Too Busy to Optimize — That's Where We Come In.</h2>
+                    <p>Running a small business means juggling everything. Hiring. Invoicing. Customer support. Admin. AdaptAIze steps in to streamline your operations using smart AI workflows that free up your time — and your budget.</p>
+                    <p className="highlight-text">No tech team needed. No AI experience required. Just results.</p>
+                    <a href="/contact" className="cta-button primary">Get Started</a>
+                  </div>
+                  <div className="busy-business-image">
+                    <img src="/busy-business-illustration.svg" alt="Business owner being helped by AI automation" />
+                  </div>
+                </div>
+              </section>
+
               {/* Testimonials Section */}
               <section id="testimonials" className="testimonials">
                 <h2>Real Results. Real Savings.</h2>
