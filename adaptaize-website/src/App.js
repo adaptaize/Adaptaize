@@ -82,26 +82,38 @@ function TestimonialCarousel() {
     }
   ];
 
+  // Number of testimonials to show at once
+  const testimonialsPerView = 3;
+  
+  // Calculate the total number of slides
+  const totalSlides = Math.ceil(testimonials.length / testimonialsPerView);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => 
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+        prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
       );
     }, 5000); // Change testimonial every 5 seconds
 
     return () => clearInterval(timer);
-  }, []);
+  }, [totalSlides]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => 
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
     );
+  };
+
+  // Get the testimonials for the current slide
+  const getCurrentTestimonials = () => {
+    const startIndex = currentIndex * testimonialsPerView;
+    return testimonials.slice(startIndex, startIndex + testimonialsPerView);
   };
 
   return (
@@ -110,22 +122,24 @@ function TestimonialCarousel() {
         <span className="arrow">←</span>
       </button>
       <div className="testimonial-content">
-        <div className="testimonial-card">
-          <p className="quote">"{testimonials[currentIndex].quote}"</p>
-          <p className="name">{testimonials[currentIndex].name}</p>
-          <p className="role">{testimonials[currentIndex].role}</p>
-        </div>
+        {getCurrentTestimonials().map((testimonial, index) => (
+          <div key={index} className="testimonial-card">
+            <p className="quote">"{testimonial.quote}"</p>
+            <p className="name">{testimonial.name}</p>
+            <p className="role">{testimonial.role}</p>
+          </div>
+        ))}
       </div>
       <button className="carousel-button next" onClick={nextTestimonial}>
         <span className="arrow">→</span>
       </button>
       <div className="carousel-dots">
-        {testimonials.map((_, index) => (
+        {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}
             className={`dot ${index === currentIndex ? 'active' : ''}`}
             onClick={() => setCurrentIndex(index)}
-            aria-label={`Go to testimonial ${index + 1}`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
