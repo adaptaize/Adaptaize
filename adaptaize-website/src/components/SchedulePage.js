@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SchedulePage = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    businessSize: '',
-    automationNeeds: ''
-  });
+  const [formData, setFormData] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -43,7 +36,7 @@ const SchedulePage = () => {
       <div className="schedule-container">
         <h1>Schedule Your Free Workflow Audit</h1>
         <p className="schedule-intro">
-          Fill out the form below to schedule your free automation audit. We'll analyze your business processes 
+          Schedule your free automation audit below. We'll analyze your business processes 
           and identify opportunities for AI-powered automation.
         </p>
         
@@ -56,81 +49,6 @@ const SchedulePage = () => {
           </div>
         ) : (
           <form className="schedule-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="email">Email Address *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="company">Company Name</label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="businessSize">Business Size</label>
-              <select
-                id="businessSize"
-                name="businessSize"
-                value={formData.businessSize}
-                onChange={handleChange}
-              >
-                <option value="">Select an option</option>
-                <option value="1-5">1-5 employees</option>
-                <option value="6-20">6-20 employees</option>
-                <option value="21-50">21-50 employees</option>
-                <option value="51-200">51-200 employees</option>
-                <option value="201+">201+ employees</option>
-              </select>
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="automationNeeds">What areas would you like to automate?</label>
-              <textarea
-                id="automationNeeds"
-                name="automationNeeds"
-                value={formData.automationNeeds}
-                onChange={handleChange}
-                rows="4"
-                placeholder="e.g., Email management, invoice processing, customer support..."
-              ></textarea>
-            </div>
-            
             <div className="form-group calendar-embed-container">
               <label>Schedule Your Consultation</label>
               <div className="calendar-embed">
@@ -145,17 +63,6 @@ const SchedulePage = () => {
                 ></iframe>
                 {/* end Google Calendar Appointment Scheduling */}
               </div>
-            </div>
-            
-            <div className="form-footer">
-              <p className="required-note">* Required fields</p>
-              <button 
-                type="submit" 
-                className="submit-button"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Submitting...' : 'Submit Information'}
-              </button>
             </div>
           </form>
         )}
