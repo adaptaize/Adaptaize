@@ -168,7 +168,7 @@ function App() {
               <section id="home" className="hero">
                 <div className="hero-content">
                   <div className="hero-text">
-                    <h1>AI-Powered Automation. Zero Upfront Cost.</h1>
+                    <h1><b>Adapt</b> Your Business With <b>AI</b> — <b>Ze</b>ro Upfront Cost.</h1>
                     <p>We help small businesses save time and money by automating everyday tasks with AI. If we don't save you money, you don't pay.</p>
                     <div className="hero-buttons">
                       <Link to="/schedule" className="cta-button primary">Get Your Free Workflow Audit</Link>
