@@ -1,6 +1,75 @@
-# Getting Started with Create React App
+# AdaptAIze Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AdaptAIze is a modern web application that helps small business owners streamline their operations through AI-powered automation. The website showcases the company's services, features client testimonials, and provides a seamless scheduling experience for potential clients.
+
+## About the Project
+
+AdaptAIze is a React-based website built to promote a business automation service that helps small business owners optimize their workflows using AI technology. The website is designed to be responsive, user-friendly, and visually appealing, with a focus on converting visitors into clients through clear calls-to-action and an integrated scheduling system.
+
+## Current Features and Capabilities
+
+- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+- **Modern UI**: Clean, professional design with smooth animations and transitions
+- **Navigation System**: Intuitive navigation with smooth scrolling to different sections
+- **Testimonials Carousel**: Auto-scrolling testimonials section showcasing client success stories
+- **Google Calendar Integration**: Embedded Google Calendar for easy appointment scheduling
+- **Contact Form**: User-friendly contact form for inquiries
+- **Policy Pages**: Privacy Policy and Terms of Service pages
+- **Performance Optimized**: Fast loading times and optimized assets
+
+## How to Test the Website Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/adaptaize-website.git
+   cd adaptaize-website
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+
+4. **View the website**:
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the website running locally.
+
+5. **Make changes**:
+   The page will automatically reload when you make changes to the code.
+
+## How to Run This Website in Production Using GitHub Pages
+
+1. **Install the GitHub Pages package**:
+   ```bash
+   npm install --save gh-pages
+   ```
+
+2. **Add the following to your `package.json`**:
+   ```json
+   "homepage": "https://yourusername.github.io/adaptaize-website",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
+   Replace `yourusername` with your actual GitHub username.
+
+3. **Build and deploy to GitHub Pages**:
+   ```bash
+   npm run deploy
+   ```
+
+4. **Configure GitHub repository settings**:
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Ensure the source is set to the `gh-pages` branch
+
+5. **Access your live website**:
+   Your website will be available at `https://yourusername.github.io/adaptaize-website`
 
 ## Available Scripts
 
