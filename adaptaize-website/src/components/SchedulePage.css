@@ -120,6 +120,62 @@
   margin-bottom: 0.5rem;
 }
 
+.calendar-direct-link {
+  margin-top: 1rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.calendar-direct-link p {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.calendar-link {
+  display: inline-block;
+  background-color: #6b46c1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-link:hover {
+  background-color: #553c9a;
+}
+
+.calendar-embed-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.calendar-embed-container label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.calendar-embed {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-embed iframe {
+  display: block;
+  border: none;
+  background-color: white;
+}
+
 @media (max-width: 768px) {
   .schedule-page {
     padding: 6rem 1rem 3rem;
@@ -131,5 +187,9 @@
   
   .schedule-container {
     padding: 1.5rem;
+  }
+  
+  .calendar-embed iframe {
+    height: 500px;
   }
 } 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SchedulePage = () => {
@@ -9,9 +9,7 @@ const SchedulePage = () => {
     company: '',
     phone: '',
     businessSize: '',
-    automationNeeds: '',
-    preferredDate: '',
-    preferredTime: ''
+    automationNeeds: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -133,32 +131,19 @@ const SchedulePage = () => {
               ></textarea>
             </div>
             
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="preferredDate">Preferred Date</label>
-                <input
-                  type="date"
-                  id="preferredDate"
-                  name="preferredDate"
-                  value={formData.preferredDate}
-                  onChange={handleChange}
-                  min={new Date().toISOString().split('T')[0]}
-                />
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="preferredTime">Preferred Time</label>
-                <select
-                  id="preferredTime"
-                  name="preferredTime"
-                  value={formData.preferredTime}
-                  onChange={handleChange}
-                >
-                  <option value="">Select a time</option>
-                  <option value="morning">Morning (9am-12pm)</option>
-                  <option value="afternoon">Afternoon (12pm-3pm)</option>
-                  <option value="evening">Evening (3pm-6pm)</option>
-                </select>
+            <div className="form-group calendar-embed-container">
+              <label>Schedule Your Consultation</label>
+              <div className="calendar-embed">
+                {/* Google Calendar Appointment Scheduling begin */}
+                <iframe 
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3th_l62VzVeuwq-ChUTZdY3Q8VXdgcIgtkPugiIPxhF1grekEPzkqwdQHgLh5AEgkSz803gRYJ?gv=true" 
+                  style={{ border: 0 }} 
+                  width="100%" 
+                  height="600" 
+                  frameBorder="0"
+                  title="Google Calendar Scheduler"
+                ></iframe>
+                {/* end Google Calendar Appointment Scheduling */}
               </div>
             </div>
             
@@ -169,7 +154,7 @@ const SchedulePage = () => {
                 className="submit-button"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Submitting...' : 'Schedule My Free Audit'}
+                {isSubmitting ? 'Submitting...' : 'Submit Information'}
               </button>
             </div>
           </form>
