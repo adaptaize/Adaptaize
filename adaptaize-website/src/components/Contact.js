@@ -40,11 +40,22 @@ function Contact() {
 
   return (
     <div className="page-container">
+      
       <div className="page-content">
         <h1>Contact Us</h1>
         <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
 
-        <div className="contact-grid">
+          <div className="contact-info">
+            <h2>Get in Touch</h2>
+            <p>You can reach us through any of the following methods:</p>
+            <ul>
+              <li>Email: adaptaize@gmail.com</li>
+              <li>Phone: +1 (408) 673-8004</li>
+            </ul>
+          </div>
+          
+        {/* TODO: Commenting till we integrate with Gmail APIs */}
+        {/* <div className="contact-grid">
           <div className="contact-info">
             <h2>Get in Touch</h2>
             <p>You can reach us through any of the following methods:</p>
@@ -115,7 +126,7 @@ function Contact() {
               </form>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
