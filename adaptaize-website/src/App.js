@@ -46,6 +46,7 @@ function Navigation() {
       <div className="nav-links">
         <button className="nav-button" onClick={() => handleNavigation('how-it-works')}>How It Works</button>
         <button className="nav-button" onClick={() => handleNavigation('testimonials')}>Testimonials</button>
+        <Link to="/contact" className="nav-button">Contact Us</Link>
         <Link to="/schedule" className="cta-button primary">Schedule Audit</Link>
       </div>
     </nav>
@@ -168,10 +169,10 @@ function App() {
               <section id="home" className="hero">
                 <div className="hero-content">
                   <div className="hero-text">
-                    <h1><b>Adapt</b> Your Business With <b>AI</b> — <b>Ze</b>ro Upfront Cost.</h1>
-                    <p>We help small businesses save time and money by automating everyday tasks with AI. If we don't save you money, you don't pay.</p>
+                    <h1><b>Adapt</b> Your Business To <b>AI</b> Era — <b>Ze</b>ro Upfront Cost.</h1>
+                    <p>We help businesses save time and money by automating everyday tasks with AI. If we don't save you money, you don't pay.</p>
                     <div className="hero-buttons">
-                      <Link to="/schedule" className="cta-button primary">Get Your Free Workflow Audit</Link>
+                      <Link to="/schedule" className="cta-button primary">Get Your Free Audit</Link>
                       <button onClick={() => document.querySelector('#how-it-works').scrollIntoView({ behavior: 'smooth' })} className="cta-button secondary">How It Works</button>
                     </div>
                   </div>
@@ -214,7 +215,7 @@ function App() {
                     <h2>You're Too Busy to Optimize — That's Where We Come In.</h2>
                     <p>Running a small business means juggling everything. Hiring. Invoicing. Customer support. Admin. AdaptAIze steps in to streamline your operations using smart AI workflows that free up your time — and your budget.</p>
                     <p className="highlight-text">No tech team needed. No AI experience required. Just results.</p>
-                    <a href="/contact" className="cta-button primary">Get Started</a>
+                    <a href="/schedule" className="cta-button primary">Get Started</a>
                   </div>
                   <div className="busy-business-image">
                     <img src="/busy-business-illustration.svg" alt="Business owner being helped by AI automation" />

@@ -49,27 +49,9 @@ function Contact() {
             <h2>Get in Touch</h2>
             <p>You can reach us through any of the following methods:</p>
             <ul>
-              <li>Email: contact@adaptaize.com</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Hours: Monday - Friday, 9am - 5pm EST</li>
+              <li>Email: adaptaize@gmail.com</li>
+              <li>Phone: +1 (408) 673-8004</li>
             </ul>
-
-            <h2>Office Location</h2>
-            <p>123 Business Street<br />
-            Suite 100<br />
-            New York, NY 10001</p>
-
-            <h2>Social Media</h2>
-            <p>Follow us on social media for updates and news:</p>
-            <ul>
-              <li>LinkedIn: /company/adaptaize</li>
-              <li>Twitter: @adaptaize</li>
-              <li>Facebook: /adaptaize</li>
-            </ul>
-
-            <h2>Support</h2>
-            <p>For technical support or service-related questions:</p>
-            <p>Email: support@adaptaize.com</p>
           </div>
 
           <div className="contact-form-container">

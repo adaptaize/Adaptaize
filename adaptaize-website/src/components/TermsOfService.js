@@ -40,7 +40,7 @@ function TermsOfService() {
 
         <h2>5. Contact Information</h2>
         <p>For any questions about these Terms of Service, please contact us at:</p>
-        <p>Email: legal@adaptaize.com</p>
+        <p>Email: adaptaize@gmail.com</p>
       </div>
     </div>
   );
