@@ -2,41 +2,41 @@ import React, { useState } from 'react';
 import './PageLayout.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   subject: '',
+  //   message: ''
+  // });
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prevState => ({
+  //     ...prevState,
+  //     [name]: value
+  //   }));
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Here you would typically send the form data to your backend
+  //   console.log('Form submitted:', formData);
+  //   setIsSubmitted(true);
     
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+  //   // Reset form after submission
+  //   setFormData({
+  //     name: '',
+  //     email: '',
+  //     subject: '',
+  //     message: ''
+  //   });
     
-    // Reset submission message after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 5000);
-  };
+  //   // Reset submission message after 5 seconds
+  //   setTimeout(() => {
+  //     setIsSubmitted(false);
+  //   }, 5000);
+  // };
 
   return (
     <div className="page-container">
